@@ -64,10 +64,8 @@ else
 endif
 Plug 'psf/black', { 'branch': 'stable' }
 
-
 " Github colpilot
 Plug 'github/copilot.vim'
-
 
 " LF
 Plug 'ptzz/lf.vim'
@@ -117,6 +115,20 @@ let g:airline_powerline_fonts = 1
 
 " Programming languagens configs """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:python3_host_prog = '/usr/bin/python3'
+
+" Clipboard """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:clipboard = {
+\   'name': 'WslClipboard',
+\   'copy': {
+\      '+': 'clip.exe',
+\      '*': 'clip.exe',
+\    },
+\   'paste': {
+\      '+': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+\      '*': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+\   },
+\   'cache_enabled': 0,
+\ }
 
 " Global Sets """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on            " Enable syntax highlight
