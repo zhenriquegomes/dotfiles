@@ -39,7 +39,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug '~/my-prototype-plugin'
 
 " Theme
-Plug 'joshdick/onedark.vim'
+Plug 'sainnhe/sonokai'
 
 " Airline
 Plug 'vim-airline/vim-airline'
@@ -79,7 +79,7 @@ call plug#end()
 "   syntax off            " Disable syntax highlighting
 
 " Themes """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme onedark
+colorscheme sonokai
 
 if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
