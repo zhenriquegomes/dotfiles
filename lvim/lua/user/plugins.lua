@@ -6,11 +6,11 @@ lvim.plugins = {
     config = function()
       vim.defer_fn(function()
         require("copilot").setup() -- https://github.com/zbirenbaum/copilot.lua/blob/master/README.md#setup-and-configuration
-      require("copilot_cmp").setup() -- https://github.com/zbirenbaum/copilot-cmp/blob/master/README.md#configuration
+        require("copilot_cmp").setup() -- https://github.com/zbirenbaum/copilot-cmp/blob/master/README.md#configuration
       end, 100)
     end,
   },
   {
-    "fatih/vim-go",
+    "fatih/vim-go"
   },
 }
