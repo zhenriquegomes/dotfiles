@@ -120,5 +120,6 @@ remoteConnect() {
 }
 
 # NeoVim
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 alias V=nvim
 
